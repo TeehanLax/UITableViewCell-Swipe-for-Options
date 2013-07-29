@@ -1,5 +1,5 @@
 //
-//  TLMasterViewController.h
+//  TLContainerViewController.h
 //  UITableViewCell-Swipe-for-Options
 //
 //  Created by Ash Furrow on 2013-07-29.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TLMasterViewController : UITableViewController
+@interface TLContainerViewController : UIViewController
 
 @end

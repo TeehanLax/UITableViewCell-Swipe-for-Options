@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Teehan+Lax. All rights reserved.
 //
 
-#import "TLMasterViewController.h"
+#import "TLTableViewController.h"
 
 #import "TLSwipeForOptionsCell.h"
 
-@interface TLMasterViewController () <TLSwipeForOptionsCellDelegate, UIActionSheetDelegate> {
+@interface TLTableViewController () <TLSwipeForOptionsCellDelegate, UIActionSheetDelegate> {
     NSMutableArray *_objects;
 }
 
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation TLMasterViewController
+@implementation TLTableViewController
 
 - (void)awakeFromNib
 {
@@ -28,16 +28,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.tableView.allowsSelectionDuringEditing = YES;
+    self.tableView.allowsMultipleSelectionDuringEditing = YES;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Public Methods
+
+- (void)deleteSelectedCells {
+    NSArray *indexPathsOfSelectedCells = [self.tableView indexPathsForSelectedRows];
+    
+    [indexPathsOfSelectedCells enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(NSIndexPath *obj, NSUInteger idx, BOOL *stop) {
+        [_objects removeObjectAtIndex:obj.row];
+    }];
+    
+    [self.tableView deleteRowsAtIndexPaths:indexPathsOfSelectedCells withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 - (void)insertNewObject:(id)sender
@@ -81,6 +93,12 @@
     return UITableViewCellEditingStyleNone;
 }
 
+-(void)setEditing:(BOOL)editing animated:(BOOL)animated {
+    [super setEditing:editing animated:animated];
+    
+    [self.delegate tableViewController:self didChangeEditing:editing];
+}
+
 #pragma UIScrollViewDelegate Methods 
 
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -98,7 +116,7 @@
 
 -(void)cellDidSelectMore:(TLSwipeForOptionsCell *)cell {
     self.mostRecentlySelectedMoreCell = cell;
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Title" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Delete" otherButtonTitles:@"Some other action", nil];
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Delete" otherButtonTitles:@"Flag", @"Mark as Unread", @"Move to Junk", @"Move Messages...", nil];
     [actionSheet showInView:self.view];
 }
 
@@ -113,7 +131,7 @@
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
     else {
-        NSLog(@"Perform some other action.");
+        [[NSNotificationCenter defaultCenter] postNotificationName:TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotification object:self.tableView];
     }
 }
 

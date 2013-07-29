@@ -70,7 +70,7 @@ NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotifica
     [self.scrollViewButtonView addSubview:deleteButton];
     
     UIView *scrollViewContentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds))];
-    scrollViewContentView.backgroundColor = [[UIColor greenColor] colorWithAlphaComponent:0.9f];
+    scrollViewContentView.backgroundColor = [UIColor whiteColor];
     [self.scrollView addSubview:scrollViewContentView];
     self.scrollViewContentView = scrollViewContentView;
     
@@ -94,15 +94,22 @@ NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotifica
 
 -(void)userPressedMoreButton:(id)sender {
     [self.delegate cellDidSelectMore:self];
-    [self.scrollView setContentOffset:CGPointZero animated:YES];
 }
 
 #pragma mark - Overridden Methods
+
+-(void)prepareForReuse {
+    [super prepareForReuse];
+    
+    [self.scrollView setContentOffset:CGPointZero animated:NO];
+}
 
 -(void)setEditing:(BOOL)editing animated:(BOOL)animated {
     [super setEditing:editing animated:animated];
     
     self.scrollView.scrollEnabled = !self.editing;
+    
+    NSLog(@"%d", editing);
 }
 
 -(UILabel *)textLabel {
