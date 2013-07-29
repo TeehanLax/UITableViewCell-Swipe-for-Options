@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="1155" y="86"/>
         </scene>
-        <!--Container View Controller-->
+        <!--Container View Controller - Table View-->
         <scene sceneID="ddm-oT-ZYC">
             <objects>
-                <viewController id="nfp-l1-yRd" customClass="TLContainerViewController" sceneMemberID="viewController">
+                <viewController title="Table View" id="nfp-l1-yRd" customClass="TLContainerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="svB-Db-URQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
