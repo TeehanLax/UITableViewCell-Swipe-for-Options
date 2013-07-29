@@ -8,8 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@class TLSwipeForOptionsCell;
+
+@protocol TLSwipeForOptionsCellDelegate <NSObject>
+
+-(void)cellDidSelectDelete:(TLSwipeForOptionsCell *)cell;
+-(void)cellDidSelectMore:(TLSwipeForOptionsCell *)cell;
+
+@end
+
 extern NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotification;
 
 @interface TLSwipeForOptionsCell : UITableViewCell
+
+@property (nonatomic, weak) id<TLSwipeForOptionsCellDelegate> delegate;
 
 @end
