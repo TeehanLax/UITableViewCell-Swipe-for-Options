@@ -25,7 +25,8 @@
     
     self.navigationItem.leftBarButtonItem = self.tableViewController.navigationItem.leftBarButtonItem;
     self.navigationItem.rightBarButtonItem = self.tableViewController.navigationItem.rightBarButtonItem;
-    self.navigationItem.title = self.tableViewController.navigationItem.title;
+    
+    self.navigationItem.title = @"Table View"; 
     
     [self setAppropriateToolbarItems];
 }
