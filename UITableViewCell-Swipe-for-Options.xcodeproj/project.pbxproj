@@ -15,13 +15,16 @@
 		5EA94CD717A6B60D0038BF1C /* TLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA94CD617A6B60D0038BF1C /* TLAppDelegate.m */; };
 		5EA94CDA17A6B60D0038BF1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EA94CD817A6B60D0038BF1C /* Main.storyboard */; };
 		5EA94CDD17A6B60D0038BF1C /* TLMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA94CDC17A6B60D0038BF1C /* TLMasterViewController.m */; };
-		5EA94CE017A6B60D0038BF1C /* TLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA94CDF17A6B60D0038BF1C /* TLDetailViewController.m */; };
 		5EA94CE217A6B60D0038BF1C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EA94CE117A6B60D0038BF1C /* Images.xcassets */; };
 		5EA94CE917A6B60D0038BF1C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA94CE817A6B60D0038BF1C /* XCTest.framework */; };
 		5EA94CEA17A6B60D0038BF1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA94CC617A6B60D0038BF1C /* Foundation.framework */; };
 		5EA94CEB17A6B60D0038BF1C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA94CCA17A6B60D0038BF1C /* UIKit.framework */; };
 		5EA94CF317A6B60D0038BF1C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EA94CF117A6B60D0038BF1C /* InfoPlist.strings */; };
 		5EA94CF517A6B60D0038BF1C /* UITableViewCell_Swipe_for_OptionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA94CF417A6B60D0038BF1C /* UITableViewCell_Swipe_for_OptionsTests.m */; };
+		5EA94D0017A6C1140038BF1C /* TLSwipeForOptionsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA94CFF17A6C1140038BF1C /* TLSwipeForOptionsCell.m */; };
+		5EA94D0217A6C3F10038BF1C /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA94D0117A6C3F10038BF1C /* Reveal.framework */; };
+		5EA94D0417A6C3F90038BF1C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA94D0317A6C3F90038BF1C /* QuartzCore.framework */; };
+		5EA94D0617A6C3FF0038BF1C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA94D0517A6C3FF0038BF1C /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,14 +51,17 @@
 		5EA94CD917A6B60D0038BF1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EA94CDB17A6B60D0038BF1C /* TLMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLMasterViewController.h; sourceTree = "<group>"; };
 		5EA94CDC17A6B60D0038BF1C /* TLMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLMasterViewController.m; sourceTree = "<group>"; };
-		5EA94CDE17A6B60D0038BF1C /* TLDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLDetailViewController.h; sourceTree = "<group>"; };
-		5EA94CDF17A6B60D0038BF1C /* TLDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLDetailViewController.m; sourceTree = "<group>"; };
 		5EA94CE117A6B60D0038BF1C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5EA94CE717A6B60D0038BF1C /* UITableViewCell-Swipe-for-OptionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UITableViewCell-Swipe-for-OptionsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA94CE817A6B60D0038BF1C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5EA94CF017A6B60D0038BF1C /* UITableViewCell-Swipe-for-OptionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UITableViewCell-Swipe-for-OptionsTests-Info.plist"; sourceTree = "<group>"; };
 		5EA94CF217A6B60D0038BF1C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5EA94CF417A6B60D0038BF1C /* UITableViewCell_Swipe_for_OptionsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableViewCell_Swipe_for_OptionsTests.m; sourceTree = "<group>"; };
+		5EA94CFE17A6C1140038BF1C /* TLSwipeForOptionsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLSwipeForOptionsCell.h; sourceTree = "<group>"; };
+		5EA94CFF17A6C1140038BF1C /* TLSwipeForOptionsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLSwipeForOptionsCell.m; sourceTree = "<group>"; };
+		5EA94D0117A6C3F10038BF1C /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		5EA94D0317A6C3F90038BF1C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5EA94D0517A6C3FF0038BF1C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +69,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EA94D0617A6C3FF0038BF1C /* CFNetwork.framework in Frameworks */,
+				5EA94D0417A6C3F90038BF1C /* QuartzCore.framework in Frameworks */,
 				5EA94CC917A6B60D0038BF1C /* CoreGraphics.framework in Frameworks */,
 				5EA94CCB17A6B60D0038BF1C /* UIKit.framework in Frameworks */,
 				5EA94CC717A6B60D0038BF1C /* Foundation.framework in Frameworks */,
+				5EA94D0217A6C3F10038BF1C /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +113,9 @@
 		5EA94CC517A6B60D0038BF1C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5EA94D0517A6C3FF0038BF1C /* CFNetwork.framework */,
+				5EA94D0317A6C3F90038BF1C /* QuartzCore.framework */,
+				5EA94D0117A6C3F10038BF1C /* Reveal.framework */,
 				5EA94CC617A6B60D0038BF1C /* Foundation.framework */,
 				5EA94CC817A6B60D0038BF1C /* CoreGraphics.framework */,
 				5EA94CCA17A6B60D0038BF1C /* UIKit.framework */,
@@ -120,8 +132,8 @@
 				5EA94CD817A6B60D0038BF1C /* Main.storyboard */,
 				5EA94CDB17A6B60D0038BF1C /* TLMasterViewController.h */,
 				5EA94CDC17A6B60D0038BF1C /* TLMasterViewController.m */,
-				5EA94CDE17A6B60D0038BF1C /* TLDetailViewController.h */,
-				5EA94CDF17A6B60D0038BF1C /* TLDetailViewController.m */,
+				5EA94CFE17A6C1140038BF1C /* TLSwipeForOptionsCell.h */,
+				5EA94CFF17A6C1140038BF1C /* TLSwipeForOptionsCell.m */,
 				5EA94CE117A6B60D0038BF1C /* Images.xcassets */,
 				5EA94CCD17A6B60D0038BF1C /* Supporting Files */,
 			);
@@ -256,9 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EA94CDD17A6B60D0038BF1C /* TLMasterViewController.m in Sources */,
-				5EA94CE017A6B60D0038BF1C /* TLDetailViewController.m in Sources */,
 				5EA94CD717A6B60D0038BF1C /* TLAppDelegate.m in Sources */,
 				5EA94CD317A6B60D0038BF1C /* main.m in Sources */,
+				5EA94D0017A6C1140038BF1C /* TLSwipeForOptionsCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,9 +393,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UITableViewCell-Swipe-for-Options/UITableViewCell-Swipe-for-Options-Prefix.pch";
 				INFOPLIST_FILE = "UITableViewCell-Swipe-for-Options/UITableViewCell-Swipe-for-Options-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -394,9 +411,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UITableViewCell-Swipe-for-Options/UITableViewCell-Swipe-for-Options-Prefix.pch";
 				INFOPLIST_FILE = "UITableViewCell-Swipe-for-Options/UITableViewCell-Swipe-for-Options-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -461,6 +483,7 @@
 				5EA94CFA17A6B60D0038BF1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5EA94CFB17A6B60D0038BF1C /* Build configuration list for PBXNativeTarget "UITableViewCell-Swipe-for-OptionsTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +492,7 @@
 				5EA94CFD17A6B60D0038BF1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
