@@ -14,16 +14,12 @@
     NSMutableArray *_objects;
 }
 
+// We need to keep track of the most recently selected cell for the action sheet.
 @property (nonatomic, weak) UITableViewCell *mostRecentlySelectedMoreCell;
 
 @end
 
 @implementation TLTableViewController
-
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-}
 
 - (void)viewDidLoad
 {
@@ -34,17 +30,13 @@
     self.tableView.allowsMultipleSelectionDuringEditing = YES;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - Public Methods
 
+// Method to delete the cells that are currently selected.
 - (void)deleteSelectedCells {
     NSArray *indexPathsOfSelectedCells = [self.tableView indexPathsForSelectedRows];
-    
+
+    // MUST be enumerated in reverse order otherwise the _objects indices become invalid.
     [indexPathsOfSelectedCells enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(NSIndexPath *obj, NSUInteger idx, BOOL *stop) {
         [_objects removeObjectAtIndex:obj.row];
     }];
@@ -52,6 +44,7 @@
     [self.tableView deleteRowsAtIndexPaths:indexPathsOfSelectedCells withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
+// Inserts a new object into the _objects array.
 - (void)insertNewObject:(id)sender
 {
     if (!_objects) {

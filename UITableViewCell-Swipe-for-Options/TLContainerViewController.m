@@ -40,6 +40,7 @@
 
 #pragma mark - Private Methods
 
+// Sets the appropriate UIBarButtonItems for our toolbar depending on the editing property of self.tableViewController.
 -(void)setAppropriateToolbarItems {
     NSArray *itemsArray;
     
@@ -59,6 +60,10 @@
 }
 
 #pragma mark - User Interface Methods
+
+/*
+ These are all configurable to do whatever you want with them. We only really use the userDidPressTrashButton: method.
+ */
 
 - (void)suerDidPressAddButton:(id)sender {
     [self.tableViewController insertNewObject:nil];
