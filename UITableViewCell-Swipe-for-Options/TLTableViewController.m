@@ -30,6 +30,13 @@
     self.tableView.allowsMultipleSelectionDuringEditing = YES;
 }
 
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    
+    // Need to do this to keep the view in a consistent state (layoutSubviews in the cell expects itself to be "closed")
+    [[NSNotificationCenter defaultCenter] postNotificationName:TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotification object:self.tableView];
+}
+
 #pragma mark - Public Methods
 
 // Method to delete the cells that are currently selected.
