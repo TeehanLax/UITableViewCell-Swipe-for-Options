@@ -53,7 +53,7 @@ NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotifica
     self.scrollViewButtonView = scrollViewButtonView;
     [self.scrollView addSubview:scrollViewButtonView];
     
-    UIButton *moreButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    UIButton *moreButton = [UIButton buttonWithType:UIButtonTypeCustom];
     moreButton.backgroundColor = [UIColor colorWithRed:0.78f green:0.78f blue:0.8f alpha:1.0f];
     moreButton.frame = CGRectMake(0, 0, kCatchWidth / 2.0f, CGRectGetHeight(self.bounds));
     [moreButton setTitle:@"More" forState:UIControlStateNormal];
@@ -61,7 +61,7 @@ NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotifica
     [moreButton addTarget:self action:@selector(userPressedMoreButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.scrollViewButtonView addSubview:moreButton];
     
-    UIButton *deleteButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    UIButton *deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
     deleteButton.backgroundColor = [UIColor colorWithRed:1.0f green:0.231f blue:0.188f alpha:1.0f];
     deleteButton.frame = CGRectMake(kCatchWidth / 2.0f, 0, kCatchWidth / 2.0f, CGRectGetHeight(self.bounds));
     [deleteButton setTitle:@"Delete" forState:UIControlStateNormal];
@@ -74,7 +74,7 @@ NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotifica
     [self.scrollView addSubview:scrollViewContentView];
     self.scrollViewContentView = scrollViewContentView;
     
-    UILabel *scrollViewLabel = [[UILabel alloc] initWithFrame:CGRectInset(self.scrollViewContentView.bounds, self.separatorInset.left, 0)];
+    UILabel *scrollViewLabel = [[UILabel alloc] initWithFrame:CGRectInset(self.scrollViewContentView.bounds, 10, 0)];
     self.scrollViewLabel = scrollViewLabel;
     [self.scrollViewContentView addSubview:scrollViewLabel];
     
