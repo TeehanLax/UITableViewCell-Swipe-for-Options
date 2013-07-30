@@ -16,8 +16,8 @@ NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotifica
 
 @property (nonatomic, weak) UIScrollView *scrollView;
 
-@property (nonatomic, weak) UIView *scrollViewContentView;
-@property (nonatomic, weak) UIView *scrollViewButtonView;
+@property (nonatomic, weak) UIView *scrollViewContentView;      //The cell content (like the label) goes in this view.
+@property (nonatomic, weak) UIView *scrollViewButtonView;       //Contains our two buttons
 
 @property (nonatomic, weak) UILabel *scrollViewLabel;
 
@@ -41,6 +41,8 @@ NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotifica
 }
 
 -(void)setup {
+    // Set up our contentView hierarchy
+    
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds))];
     scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.bounds) + kCatchWidth, CGRectGetHeight(self.bounds));
     scrollView.delegate = self;
@@ -53,6 +55,7 @@ NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotifica
     self.scrollViewButtonView = scrollViewButtonView;
     [self.scrollView addSubview:scrollViewButtonView];
     
+    // Set up our two buttons
     UIButton *moreButton = [UIButton buttonWithType:UIButtonTypeCustom];
     moreButton.backgroundColor = [UIColor colorWithRed:0.78f green:0.78f blue:0.8f alpha:1.0f];
     moreButton.frame = CGRectMake(0, 0, kCatchWidth / 2.0f, CGRectGetHeight(self.bounds));
@@ -113,6 +116,7 @@ NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotifica
 }
 
 -(UILabel *)textLabel {
+    // Kind of a cheat to reduce our external dependencies
     return self.scrollViewLabel;
 }
 
