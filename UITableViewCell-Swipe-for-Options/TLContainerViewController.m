@@ -13,7 +13,6 @@
 @interface TLContainerViewController () <TLTableViewControllerDelegate>
 
 @property (nonatomic, weak) TLTableViewController *tableViewController;
-@property (nonatomic, weak) IBOutlet UIToolbar *toolbar;
 
 @end
 
@@ -86,6 +85,10 @@
 
 -(void)tableViewController:(TLTableViewController *)viewController didChangeEditing:(BOOL)editing {
     [self setAppropriateToolbarItems];
+}
+
+-(void)presentActionSheet:(UIActionSheet *)actionSheet fromViewController:(TLTableViewController *)viewController {
+    [actionSheet showFromToolbar:self.toolbar];
 }
 
 @end

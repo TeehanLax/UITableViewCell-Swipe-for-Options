@@ -9,6 +9,7 @@
 #import "TLTableViewController.h"
 
 #import "TLSwipeForOptionsCell.h"
+#import "TLContainerViewController.h"
 
 @interface TLTableViewController () <TLSwipeForOptionsCellDelegate, UIActionSheetDelegate> {
     NSMutableArray *_objects;
@@ -117,7 +118,7 @@
 -(void)cellDidSelectMore:(TLSwipeForOptionsCell *)cell {
     self.mostRecentlySelectedMoreCell = cell;
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Flag", @"Mark as Unread", @"Move to Junk", @"Move Messages...", nil];
-    [actionSheet showInView:self.view];
+    [self.delegate presentActionSheet:actionSheet fromViewController:self];
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
