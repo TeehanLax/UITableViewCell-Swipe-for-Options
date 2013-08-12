@@ -10,4 +10,6 @@
 
 @interface TLContainerViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UIToolbar *toolbar;
+
 @end
