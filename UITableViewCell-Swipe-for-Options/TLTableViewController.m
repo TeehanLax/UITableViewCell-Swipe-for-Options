@@ -91,6 +91,7 @@
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
 	[super setEditing:editing animated:animated];
+	[[NSNotificationCenter defaultCenter] postNotificationName:TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotification object:self.tableView];
 	[self.delegate tableViewController:self didChangeEditing:editing];
 }
 
