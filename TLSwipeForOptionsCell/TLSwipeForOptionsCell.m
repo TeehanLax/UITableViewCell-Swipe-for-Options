@@ -1,6 +1,6 @@
 //
 //  TLSwipeForOptionsCell.m
-//  UITableViewCell-Swipe-for-Options
+//  TLSwipeForOptionsCell
 //
 //  Created by Ash Furrow on 2013-07-29.
 //  Copyright (c) 2013 Teehan+Lax. All rights reserved.

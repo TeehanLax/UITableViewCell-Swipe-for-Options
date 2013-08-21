@@ -1,14 +1,14 @@
 //
-//  TLAppDelegate.m
-//  UITableViewCell-Swipe-for-Options
+//  AppDelegate.m
+//  TLSFOC-Demo
 //
 //  Created by Ash Furrow on 2013-07-29.
 //  Copyright (c) 2013 Teehan+Lax. All rights reserved.
 //
 
-#import "TLAppDelegate.h"
+#import "AppDelegate.h"
 
-@implementation TLAppDelegate
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Override point for customization after application launch.

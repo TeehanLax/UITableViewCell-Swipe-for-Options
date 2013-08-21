@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
 @class TLOverlayView;
 
 @protocol TLOverlayViewDelegate <NSObject>
@@ -16,7 +15,6 @@
 - (UIView *)overlayView:(TLOverlayView *)view didHitTest:(CGPoint)point withEvent:(UIEvent *)event;
 
 @end
-
 
 @interface TLOverlayView : UIView
 

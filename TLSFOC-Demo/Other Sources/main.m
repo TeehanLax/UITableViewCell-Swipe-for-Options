@@ -1,13 +1,13 @@
 //
 //  main.m
-//  UITableViewCell-Swipe-for-Options
+//  TLSFOC-Demo
 //
 //  Created by Ash Furrow on 2013-07-29.
 //  Copyright (c) 2013 Teehan+Lax. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "TLAppDelegate.h"
+#import "AppDelegate.h"
 
 typedef int (*PYStdWriter)(void *, const char *, int);
 static PYStdWriter _oldStdWrite;
@@ -27,6 +27,6 @@ void __iOS7B5CleanConsoleOutput(void) {
 int main(int argc, char * argv[]) {
 	__iOS7B5CleanConsoleOutput();
 	@autoreleasepool {
-		return UIApplicationMain(argc, argv, nil, NSStringFromClass([TLAppDelegate class]));
+		return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
 	}
 }

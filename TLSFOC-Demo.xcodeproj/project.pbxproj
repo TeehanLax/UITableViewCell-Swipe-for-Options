@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA3B2D7917C5843B00DB8C9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3B2D7817C5843B00DB8C9F /* Foundation.framework */; };
+		DA3B2D7B17C5843B00DB8C9F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3B2D7A17C5843B00DB8C9F /* CoreGraphics.framework */; };
+		DA3B2D7D17C5843B00DB8C9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3B2D7C17C5843B00DB8C9F /* UIKit.framework */; };
+		DA3B2D9B17C5843B00DB8C9F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3B2D9A17C5843B00DB8C9F /* XCTest.framework */; };
+		DA3B2D9C17C5843B00DB8C9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3B2D7817C5843B00DB8C9F /* Foundation.framework */; };
+		DA3B2D9D17C5843B00DB8C9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3B2D7C17C5843B00DB8C9F /* UIKit.framework */; };
+		DA3B2DC217C5849900DB8C9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B2DB317C5849900DB8C9F /* AppDelegate.m */; };
+		DA3B2DC317C5849900DB8C9F /* TLContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B2DB517C5849900DB8C9F /* TLContainerViewController.m */; };
+		DA3B2DC417C5849900DB8C9F /* TLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B2DB717C5849900DB8C9F /* TLTableViewController.m */; };
+		DA3B2DC517C5849900DB8C9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B2DB917C5849900DB8C9F /* main.m */; };
+		DA3B2DC617C5849900DB8C9F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3B2DBC17C5849900DB8C9F /* Images.xcassets */; };
+		DA3B2DC717C5849900DB8C9F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3B2DBD17C5849900DB8C9F /* MainStoryboard.storyboard */; };
+		DA3B2DD417C5853E00DB8C9F /* TLSFOC_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B2DD217C5853E00DB8C9F /* TLSFOC_DemoTests.m */; };
+		DA3B2DD617C5862200DB8C9F /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3B2DD517C5862200DB8C9F /* Reveal.framework */; };
+		DA3B2DD917C5863200DB8C9F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3B2DD717C5863200DB8C9F /* CFNetwork.framework */; };
+		DA3B2DDA17C5863200DB8C9F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3B2DD817C5863200DB8C9F /* QuartzCore.framework */; };
+		DA3B2DE017C5869900DB8C9F /* TLOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B2DDD17C5869900DB8C9F /* TLOverlayView.m */; };
+		DA3B2DE117C5869900DB8C9F /* TLSwipeForOptionsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B2DDF17C5869900DB8C9F /* TLSwipeForOptionsCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA3B2D9E17C5843B00DB8C9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA3B2D6D17C5843B00DB8C9F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA3B2D7417C5843B00DB8C9F;
+			remoteInfo = "TLSFOC-Demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DA3B2D7517C5843B00DB8C9F /* TLSFOC-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TLSFOC-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA3B2D7817C5843B00DB8C9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DA3B2D7A17C5843B00DB8C9F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DA3B2D7C17C5843B00DB8C9F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DA3B2D9917C5843B00DB8C9F /* TLSFOC-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TLSFOC-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA3B2D9A17C5843B00DB8C9F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DA3B2DB217C5849900DB8C9F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DA3B2DB317C5849900DB8C9F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DA3B2DB417C5849900DB8C9F /* TLContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLContainerViewController.h; sourceTree = "<group>"; };
+		DA3B2DB517C5849900DB8C9F /* TLContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLContainerViewController.m; sourceTree = "<group>"; };
+		DA3B2DB617C5849900DB8C9F /* TLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLTableViewController.h; sourceTree = "<group>"; };
+		DA3B2DB717C5849900DB8C9F /* TLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLTableViewController.m; sourceTree = "<group>"; };
+		DA3B2DB917C5849900DB8C9F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DA3B2DBA17C5849900DB8C9F /* TLSFOC-Demo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TLSFOC-Demo-Prefix.pch"; sourceTree = "<group>"; };
+		DA3B2DBC17C5849900DB8C9F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DA3B2DBD17C5849900DB8C9F /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		DA3B2DBE17C5849900DB8C9F /* TLSFOC-Demo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TLSFOC-Demo-Info.plist"; sourceTree = "<group>"; };
+		DA3B2DD117C5853E00DB8C9F /* TLSFOC-DemoTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TLSFOC-DemoTests-Info.plist"; sourceTree = "<group>"; };
+		DA3B2DD217C5853E00DB8C9F /* TLSFOC_DemoTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLSFOC_DemoTests.m; sourceTree = "<group>"; };
+		DA3B2DD517C5862200DB8C9F /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		DA3B2DD717C5863200DB8C9F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		DA3B2DD817C5863200DB8C9F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DA3B2DDC17C5869900DB8C9F /* TLOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLOverlayView.h; sourceTree = "<group>"; };
+		DA3B2DDD17C5869900DB8C9F /* TLOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLOverlayView.m; sourceTree = "<group>"; };
+		DA3B2DDE17C5869900DB8C9F /* TLSwipeForOptionsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLSwipeForOptionsCell.h; sourceTree = "<group>"; };
+		DA3B2DDF17C5869900DB8C9F /* TLSwipeForOptionsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLSwipeForOptionsCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA3B2D7217C5843B00DB8C9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA3B2D7B17C5843B00DB8C9F /* CoreGraphics.framework in Frameworks */,
+				DA3B2D7D17C5843B00DB8C9F /* UIKit.framework in Frameworks */,
+				DA3B2D7917C5843B00DB8C9F /* Foundation.framework in Frameworks */,
+				DA3B2DD617C5862200DB8C9F /* Reveal.framework in Frameworks */,
+				DA3B2DD917C5863200DB8C9F /* CFNetwork.framework in Frameworks */,
+				DA3B2DDA17C5863200DB8C9F /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA3B2D9617C5843B00DB8C9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA3B2D9B17C5843B00DB8C9F /* XCTest.framework in Frameworks */,
+				DA3B2D9D17C5843B00DB8C9F /* UIKit.framework in Frameworks */,
+				DA3B2D9C17C5843B00DB8C9F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA3B2D6C17C5843B00DB8C9F = {
+			isa = PBXGroup;
+			children = (
+				DA3B2DB017C5849900DB8C9F /* TLSFOC-Demo */,
+				DA3B2DD017C5853E00DB8C9F /* TLSFOC-DemoTests */,
+				DA3B2D7717C5843B00DB8C9F /* Frameworks */,
+				DA3B2D7617C5843B00DB8C9F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA3B2D7617C5843B00DB8C9F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA3B2D7517C5843B00DB8C9F /* TLSFOC-Demo.app */,
+				DA3B2D9917C5843B00DB8C9F /* TLSFOC-DemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA3B2D7717C5843B00DB8C9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA3B2D7817C5843B00DB8C9F /* Foundation.framework */,
+				DA3B2D7A17C5843B00DB8C9F /* CoreGraphics.framework */,
+				DA3B2D7C17C5843B00DB8C9F /* UIKit.framework */,
+				DA3B2D9A17C5843B00DB8C9F /* XCTest.framework */,
+				DA3B2DD517C5862200DB8C9F /* Reveal.framework */,
+				DA3B2DD717C5863200DB8C9F /* CFNetwork.framework */,
+				DA3B2DD817C5863200DB8C9F /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA3B2DB017C5849900DB8C9F /* TLSFOC-Demo */ = {
+			isa = PBXGroup;
+			children = (
+				DA3B2DB117C5849900DB8C9F /* Classes */,
+				DA3B2DB817C5849900DB8C9F /* Other Sources */,
+				DA3B2DBB17C5849900DB8C9F /* Resources */,
+			);
+			path = "TLSFOC-Demo";
+			sourceTree = "<group>";
+		};
+		DA3B2DB117C5849900DB8C9F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DA3B2DB217C5849900DB8C9F /* AppDelegate.h */,
+				DA3B2DB317C5849900DB8C9F /* AppDelegate.m */,
+				DA3B2DB417C5849900DB8C9F /* TLContainerViewController.h */,
+				DA3B2DB517C5849900DB8C9F /* TLContainerViewController.m */,
+				DA3B2DB617C5849900DB8C9F /* TLTableViewController.h */,
+				DA3B2DB717C5849900DB8C9F /* TLTableViewController.m */,
+				DA3B2DDB17C5869900DB8C9F /* TLSwipeForOptionsCell */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		DA3B2DB817C5849900DB8C9F /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DA3B2DB917C5849900DB8C9F /* main.m */,
+				DA3B2DBA17C5849900DB8C9F /* TLSFOC-Demo-Prefix.pch */,
+			);
+			path = "Other Sources";
+			sourceTree = "<group>";
+		};
+		DA3B2DBB17C5849900DB8C9F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DA3B2DBC17C5849900DB8C9F /* Images.xcassets */,
+				DA3B2DBD17C5849900DB8C9F /* MainStoryboard.storyboard */,
+				DA3B2DBE17C5849900DB8C9F /* TLSFOC-Demo-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DA3B2DD017C5853E00DB8C9F /* TLSFOC-DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA3B2DD217C5853E00DB8C9F /* TLSFOC_DemoTests.m */,
+				DA3B2DD117C5853E00DB8C9F /* TLSFOC-DemoTests-Info.plist */,
+			);
+			name = "TLSFOC-DemoTests";
+			path = "TLSFOC-Demo/Tests";
+			sourceTree = "<group>";
+		};
+		DA3B2DDB17C5869900DB8C9F /* TLSwipeForOptionsCell */ = {
+			isa = PBXGroup;
+			children = (
+				DA3B2DDC17C5869900DB8C9F /* TLOverlayView.h */,
+				DA3B2DDD17C5869900DB8C9F /* TLOverlayView.m */,
+				DA3B2DDE17C5869900DB8C9F /* TLSwipeForOptionsCell.h */,
+				DA3B2DDF17C5869900DB8C9F /* TLSwipeForOptionsCell.m */,
+			);
+			path = TLSwipeForOptionsCell;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA3B2D7417C5843B00DB8C9F /* TLSFOC-Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA3B2DAA17C5843B00DB8C9F /* Build configuration list for PBXNativeTarget "TLSFOC-Demo" */;
+			buildPhases = (
+				DA3B2D7117C5843B00DB8C9F /* Sources */,
+				DA3B2D7217C5843B00DB8C9F /* Frameworks */,
+				DA3B2D7317C5843B00DB8C9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TLSFOC-Demo";
+			productName = "TLSFOC-Demo";
+			productReference = DA3B2D7517C5843B00DB8C9F /* TLSFOC-Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DA3B2D9817C5843B00DB8C9F /* TLSFOC-DemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA3B2DAD17C5843B00DB8C9F /* Build configuration list for PBXNativeTarget "TLSFOC-DemoTests" */;
+			buildPhases = (
+				DA3B2D9517C5843B00DB8C9F /* Sources */,
+				DA3B2D9617C5843B00DB8C9F /* Frameworks */,
+				DA3B2D9717C5843B00DB8C9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA3B2D9F17C5843B00DB8C9F /* PBXTargetDependency */,
+			);
+			name = "TLSFOC-DemoTests";
+			productName = "TLSFOC-DemoTests";
+			productReference = DA3B2D9917C5843B00DB8C9F /* TLSFOC-DemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA3B2D6D17C5843B00DB8C9F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Teehan+Lax";
+				TargetAttributes = {
+					DA3B2D9817C5843B00DB8C9F = {
+						TestTargetID = DA3B2D7417C5843B00DB8C9F;
+					};
+				};
+			};
+			buildConfigurationList = DA3B2D7017C5843B00DB8C9F /* Build configuration list for PBXProject "TLSFOC-Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA3B2D6C17C5843B00DB8C9F;
+			productRefGroup = DA3B2D7617C5843B00DB8C9F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA3B2D7417C5843B00DB8C9F /* TLSFOC-Demo */,
+				DA3B2D9817C5843B00DB8C9F /* TLSFOC-DemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA3B2D7317C5843B00DB8C9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA3B2DC717C5849900DB8C9F /* MainStoryboard.storyboard in Resources */,
+				DA3B2DC617C5849900DB8C9F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA3B2D9717C5843B00DB8C9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA3B2D7117C5843B00DB8C9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA3B2DC217C5849900DB8C9F /* AppDelegate.m in Sources */,
+				DA3B2DC317C5849900DB8C9F /* TLContainerViewController.m in Sources */,
+				DA3B2DC417C5849900DB8C9F /* TLTableViewController.m in Sources */,
+				DA3B2DC517C5849900DB8C9F /* main.m in Sources */,
+				DA3B2DE017C5869900DB8C9F /* TLOverlayView.m in Sources */,
+				DA3B2DE117C5869900DB8C9F /* TLSwipeForOptionsCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA3B2D9517C5843B00DB8C9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA3B2DD417C5853E00DB8C9F /* TLSFOC_DemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA3B2D9F17C5843B00DB8C9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA3B2D7417C5843B00DB8C9F /* TLSFOC-Demo */;
+			targetProxy = DA3B2D9E17C5843B00DB8C9F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DA3B2DA817C5843B00DB8C9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DA3B2DA917C5843B00DB8C9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA3B2DAB17C5843B00DB8C9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+					"/App\\ Development/github/UITableViewCell-Swipe-for-Options",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TLSFOC-Demo/Other Sources/TLSFOC-Demo-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/TLSFOC-Demo/Resources/TLSFOC-Demo-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DA3B2DAC17C5843B00DB8C9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+					"/App\\ Development/github/UITableViewCell-Swipe-for-Options",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TLSFOC-Demo/Other Sources/TLSFOC-Demo-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/TLSFOC-Demo/Resources/TLSFOC-Demo-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DA3B2DAE17C5843B00DB8C9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TLSFOC-Demo.app/TLSFOC-Demo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TLSFOC-Demo/TLSFOC-Demo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TLSFOC-Demo/Tests/TLSFOC-DemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DA3B2DAF17C5843B00DB8C9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TLSFOC-Demo.app/TLSFOC-Demo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TLSFOC-Demo/TLSFOC-Demo-Prefix.pch";
+				INFOPLIST_FILE = "TLSFOC-Demo/Tests/TLSFOC-DemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA3B2D7017C5843B00DB8C9F /* Build configuration list for PBXProject "TLSFOC-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA3B2DA817C5843B00DB8C9F /* Debug */,
+				DA3B2DA917C5843B00DB8C9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA3B2DAA17C5843B00DB8C9F /* Build configuration list for PBXNativeTarget "TLSFOC-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA3B2DAB17C5843B00DB8C9F /* Debug */,
+				DA3B2DAC17C5843B00DB8C9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA3B2DAD17C5843B00DB8C9F /* Build configuration list for PBXNativeTarget "TLSFOC-DemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA3B2DAE17C5843B00DB8C9F /* Debug */,
+				DA3B2DAF17C5843B00DB8C9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA3B2D6D17C5843B00DB8C9F /* Project object */;
+}
