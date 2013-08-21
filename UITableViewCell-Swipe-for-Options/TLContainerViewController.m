@@ -47,10 +47,9 @@
 					   [[UIBarButtonItem alloc] initWithTitle:@"Move" style:UIBarButtonItemStylePlain target:self action:@selector(userDidPressMoveButton:)],
 					   [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
 					   [[UIBarButtonItem alloc] initWithTitle:@"Mark" style:UIBarButtonItemStylePlain target:self action:@selector(userDidPressMarkButton:)]];
-	}
-	else {
+	} else {
 		itemsArray = @[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
-					   [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(suerDidPressAddButton:)]];
+					   [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(userDidPressAddButton:)]];
 	}
 	
 	[self.toolbar setItems:itemsArray animated:NO];
@@ -62,7 +61,7 @@
  These are all configurable to do whatever you want with them. We only really use the userDidPressTrashButton: method.
  */
 
-- (void)suerDidPressAddButton:(id)sender {
+- (void)userDidPressAddButton:(id)sender {
 	[self.tableViewController insertNewObject:nil];
 }
 
