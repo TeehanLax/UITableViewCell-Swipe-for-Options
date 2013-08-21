@@ -12,8 +12,8 @@
 
 @protocol TLSwipeForOptionsCellDelegate <NSObject>
 
--(void)cellDidSelectDelete:(TLSwipeForOptionsCell *)cell;
--(void)cellDidSelectMore:(TLSwipeForOptionsCell *)cell;
+- (void)cellDidSelectDelete:(TLSwipeForOptionsCell *)cell;
+- (void)cellDidSelectMore:(TLSwipeForOptionsCell *)cell;
 
 @end
 

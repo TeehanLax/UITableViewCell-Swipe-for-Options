@@ -12,8 +12,8 @@
 
 @protocol TLTableViewControllerDelegate <NSObject>
 
--(void)tableViewController:(TLTableViewController *)viewController didChangeEditing:(BOOL)editing;
--(void)presentActionSheet:(UIActionSheet *)actionSheet fromViewController:(TLTableViewController *)viewController;
+- (void)tableViewController:(TLTableViewController *)viewController didChangeEditing:(BOOL)editing;
+- (void)presentActionSheet:(UIActionSheet *)actionSheet fromViewController:(TLTableViewController *)viewController;
 
 @end
 
