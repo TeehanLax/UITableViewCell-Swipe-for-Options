@@ -135,14 +135,14 @@
 		[self.view addSubview:self.overlayView];
 		
 		for (id subview in [self.tableView subviews]) {
-			if (![subview isEqual:cell] && ![subview isEqual:self.overlayView])
+			if (![subview isEqual:cell] && [subview isKindOfClass:[TLSwipeForOptionsCell class]])
 				[subview setUserInteractionEnabled:NO];
 		}
 	} else {
 		[self.overlayView removeFromSuperview];
 		
 		for (id subview in [self.tableView subviews]) {
-			if (![subview isEqual:cell] && ![subview isEqual:self.overlayView])
+			if (![subview isEqual:cell] && [subview isKindOfClass:[TLSwipeForOptionsCell class]])
 				[subview setUserInteractionEnabled:YES];
 		}
 	}
