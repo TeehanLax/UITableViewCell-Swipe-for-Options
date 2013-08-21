@@ -26,6 +26,7 @@
 		5EA94D0217A6C3F10038BF1C /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA94D0117A6C3F10038BF1C /* Reveal.framework */; };
 		5EA94D0417A6C3F90038BF1C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA94D0317A6C3F90038BF1C /* QuartzCore.framework */; };
 		5EA94D0617A6C3FF0038BF1C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA94D0517A6C3FF0038BF1C /* CFNetwork.framework */; };
+		DABE181B17C461AE006AE8C1 /* TLOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = DABE181A17C461AE006AE8C1 /* TLOverlayView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		5EA94D0117A6C3F10038BF1C /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		5EA94D0317A6C3F90038BF1C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5EA94D0517A6C3FF0038BF1C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		DABE181917C461AE006AE8C1 /* TLOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLOverlayView.h; sourceTree = "<group>"; };
+		DABE181A17C461AE006AE8C1 /* TLOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLOverlayView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,10 +136,12 @@
 				5EA94CD517A6B60D0038BF1C /* TLAppDelegate.h */,
 				5EA94CD617A6B60D0038BF1C /* TLAppDelegate.m */,
 				5E8B74EA17A808DD00B9187A /* MainStoryboard.storyboard */,
-				5EA94CDB17A6B60D0038BF1C /* TLTableViewController.h */,
-				5EA94CDC17A6B60D0038BF1C /* TLTableViewController.m */,
 				5E13E00217A7056000AD06FC /* TLContainerViewController.h */,
 				5E13E00317A7056000AD06FC /* TLContainerViewController.m */,
+				5EA94CDB17A6B60D0038BF1C /* TLTableViewController.h */,
+				5EA94CDC17A6B60D0038BF1C /* TLTableViewController.m */,
+				DABE181917C461AE006AE8C1 /* TLOverlayView.h */,
+				DABE181A17C461AE006AE8C1 /* TLOverlayView.m */,
 				5EA94CFE17A6C1140038BF1C /* TLSwipeForOptionsCell.h */,
 				5EA94CFF17A6C1140038BF1C /* TLSwipeForOptionsCell.m */,
 				5EA94CE117A6B60D0038BF1C /* Images.xcassets */,
@@ -277,6 +282,7 @@
 				5EA94CD317A6B60D0038BF1C /* main.m in Sources */,
 				5E13E00417A7056000AD06FC /* TLContainerViewController.m in Sources */,
 				5EA94D0017A6C1140038BF1C /* TLSwipeForOptionsCell.m in Sources */,
+				DABE181B17C461AE006AE8C1 /* TLOverlayView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

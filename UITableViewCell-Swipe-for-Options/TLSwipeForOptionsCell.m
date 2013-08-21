@@ -21,6 +21,8 @@ NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotifica
 
 @property (nonatomic, weak) UILabel *scrollViewLabel;
 
+@property (nonatomic, assign) BOOL isShowingMenu;
+
 @end
 
 @implementation TLSwipeForOptionsCell
@@ -40,6 +42,8 @@ NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotifica
 
 - (void)setup {
 	// Set up our contentView hierarchy
+	
+	self.isShowingMenu = NO;
 	
 	UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds))];
 	scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.bounds) + kCatchWidth, CGRectGetHeight(self.bounds));
@@ -145,6 +149,18 @@ NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotifica
 	}
 	
 	self.scrollViewButtonView.frame = CGRectMake(scrollView.contentOffset.x + (CGRectGetWidth(self.bounds) - kCatchWidth), 0.0f, kCatchWidth, CGRectGetHeight(self.bounds));
+	
+	if (scrollView.contentOffset.x >= kCatchWidth) {
+		if (!self.isShowingMenu) {
+			self.isShowingMenu = YES;
+			[self.delegate cell:self didShowMenu:self.isShowingMenu];
+		}
+	} else if (scrollView.contentOffset.x == 0.0f) {
+		if (self.isShowingMenu) {
+			self.isShowingMenu = NO;
+			[self.delegate cell:self didShowMenu:self.isShowingMenu];
+		}
+	}
 }
 
 @end

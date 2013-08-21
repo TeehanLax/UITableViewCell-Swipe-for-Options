@@ -12,6 +12,7 @@
 
 @protocol TLSwipeForOptionsCellDelegate <NSObject>
 
+- (void)cell:(TLSwipeForOptionsCell *)cell didShowMenu:(BOOL)isShowingMenu;
 - (void)cellDidSelectDelete:(TLSwipeForOptionsCell *)cell;
 - (void)cellDidSelectMore:(TLSwipeForOptionsCell *)cell;
 
@@ -22,5 +23,7 @@ extern NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingN
 @interface TLSwipeForOptionsCell : UITableViewCell
 
 @property (nonatomic, weak) id<TLSwipeForOptionsCellDelegate> delegate;
+
+- (BOOL)isShowingMenu;
 
 @end
