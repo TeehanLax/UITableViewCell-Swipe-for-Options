@@ -24,6 +24,4 @@ extern NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingN
 
 @property (nonatomic, weak) id<TLSwipeForOptionsCellDelegate> delegate;
 
-- (BOOL)isShowingMenu;
-
 @end
