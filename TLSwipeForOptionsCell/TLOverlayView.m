@@ -10,6 +10,14 @@
 
 @implementation TLOverlayView
 
+- (id)initWithFrame:(CGRect)frame {
+	self = [super initWithFrame:frame];
+	if (self) {
+		self.backgroundColor = [UIColor clearColor];
+	}
+	return self;
+}
+
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
 	return [self.delegate overlayView:self didHitTest:point withEvent:event];
 }

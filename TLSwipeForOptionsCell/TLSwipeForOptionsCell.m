@@ -8,7 +8,7 @@
 
 #import "TLSwipeForOptionsCell.h"
 
-NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotification = @"TLSwipeForOptionsCellEnclosingTableViewDidScrollNotification";
+NSString *const TLSwipeForOptionsCellShouldHideMenuNotification = @"TLSwipeForOptionsCellShouldHideMenuNotification";
 
 #define kCatchWidth 148.0f
 
@@ -83,10 +83,10 @@ NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotifica
 	self.scrollViewLabel = scrollViewLabel;
 	[self.scrollViewContentView addSubview:scrollViewLabel];
 	
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enclosingTableViewDidScroll) name:TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotification object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideMenuOptions) name:TLSwipeForOptionsCellShouldHideMenuNotification object:nil];
 }
 
-- (void)enclosingTableViewDidScroll {
+- (void)hideMenuOptions {
 	[self.scrollView setContentOffset:CGPointZero animated:YES];
 }
 
