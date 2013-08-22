@@ -1,5 +1,5 @@
 //
-//  TLMasterViewController.h
+//  TLTableViewController.h
 //  TLSFOC-Demo
 //
 //  Created by Ash Furrow on 2013-07-29.

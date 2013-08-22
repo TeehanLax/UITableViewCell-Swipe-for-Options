@@ -1,5 +1,5 @@
 //
-//  TLMasterViewController.m
+//  TLTableViewController.m
 //  TLSFOC-Demo
 //
 //  Created by Ash Furrow on 2013-07-29.
@@ -37,7 +37,7 @@
 	[super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
 	
 	// Need to do this to keep the view in a consistent state (layoutSubviews in the cell expects itself to be "closed")
-	[[NSNotificationCenter defaultCenter] postNotificationName:TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotification object:self.tableView];
+	[[NSNotificationCenter defaultCenter] postNotificationName:TLSwipeForOptionsCellShouldHideMenuNotification object:self.tableView];
 }
 
 #pragma mark - Public Methods
@@ -64,7 +64,7 @@
 	[self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 	
 	// Need to call this whenever we scroll our table view programmatically
-	[[NSNotificationCenter defaultCenter] postNotificationName:TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotification object:self.tableView];
+	[[NSNotificationCenter defaultCenter] postNotificationName:TLSwipeForOptionsCellShouldHideMenuNotification object:self.tableView];
 }
 
 #pragma mark - Table View
@@ -94,14 +94,14 @@
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
 	[super setEditing:editing animated:animated];
-	[[NSNotificationCenter defaultCenter] postNotificationName:TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotification object:self.tableView];
+	[[NSNotificationCenter defaultCenter] postNotificationName:TLSwipeForOptionsCellShouldHideMenuNotification object:self.tableView];
 	[self.delegate tableViewController:self didChangeEditing:editing];
 }
 
 #pragma UIScrollViewDelegate Methods 
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-	[[NSNotificationCenter defaultCenter] postNotificationName:TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotification object:scrollView];
+	[[NSNotificationCenter defaultCenter] postNotificationName:TLSwipeForOptionsCellShouldHideMenuNotification object:scrollView];
 }
 
 #pragma mark - TLOverlayViewDelegate Methods
@@ -114,7 +114,7 @@
 	
 	shouldInterceptTouches = CGRectContainsPoint(rect, location);
 	if (!shouldInterceptTouches)
-		[[NSNotificationCenter defaultCenter] postNotificationName:TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotification object:self.tableView];
+		[[NSNotificationCenter defaultCenter] postNotificationName:TLSwipeForOptionsCellShouldHideMenuNotification object:self.tableView];
 	
 	return shouldInterceptTouches?[self.cellDisplayingMenuOptions hitTest:point withEvent:event]:view;
 }
@@ -127,7 +127,6 @@
 	if (isShowingMenu) {
 		if (!self.overlayView) {
 			self.overlayView = [[TLOverlayView alloc] initWithFrame:self.view.bounds];
-			[self.overlayView setBackgroundColor:[UIColor clearColor]];
 			[self.overlayView setDelegate:self];
 		}
 		
@@ -170,7 +169,7 @@
 		[_objects removeObjectAtIndex:indexPath.row];
 		[self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 	} else {
-		[[NSNotificationCenter defaultCenter] postNotificationName:TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotification object:self.tableView];
+		[[NSNotificationCenter defaultCenter] postNotificationName:TLSwipeForOptionsCellShouldHideMenuNotification object:self.tableView];
 	}
 }
 
