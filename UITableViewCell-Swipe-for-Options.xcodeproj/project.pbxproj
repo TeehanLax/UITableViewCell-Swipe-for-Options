@@ -17,26 +17,11 @@
 		5EA94CD717A6B60D0038BF1C /* TLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA94CD617A6B60D0038BF1C /* TLAppDelegate.m */; };
 		5EA94CDD17A6B60D0038BF1C /* TLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA94CDC17A6B60D0038BF1C /* TLTableViewController.m */; };
 		5EA94CE217A6B60D0038BF1C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EA94CE117A6B60D0038BF1C /* Images.xcassets */; };
-		5EA94CE917A6B60D0038BF1C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA94CE817A6B60D0038BF1C /* XCTest.framework */; };
-		5EA94CEA17A6B60D0038BF1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA94CC617A6B60D0038BF1C /* Foundation.framework */; };
-		5EA94CEB17A6B60D0038BF1C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA94CCA17A6B60D0038BF1C /* UIKit.framework */; };
-		5EA94CF317A6B60D0038BF1C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EA94CF117A6B60D0038BF1C /* InfoPlist.strings */; };
-		5EA94CF517A6B60D0038BF1C /* UITableViewCell_Swipe_for_OptionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA94CF417A6B60D0038BF1C /* UITableViewCell_Swipe_for_OptionsTests.m */; };
 		5EA94D0017A6C1140038BF1C /* TLSwipeForOptionsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA94CFF17A6C1140038BF1C /* TLSwipeForOptionsCell.m */; };
 		5EA94D0217A6C3F10038BF1C /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA94D0117A6C3F10038BF1C /* Reveal.framework */; };
 		5EA94D0417A6C3F90038BF1C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA94D0317A6C3F90038BF1C /* QuartzCore.framework */; };
 		5EA94D0617A6C3FF0038BF1C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA94D0517A6C3FF0038BF1C /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		5EA94CEC17A6B60D0038BF1C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5EA94CBB17A6B60D0038BF1C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5EA94CC217A6B60D0038BF1C;
-			remoteInfo = "UITableViewCell-Swipe-for-Options";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5E13E00217A7056000AD06FC /* TLContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLContainerViewController.h; sourceTree = "<group>"; };
@@ -55,11 +40,7 @@
 		5EA94CDB17A6B60D0038BF1C /* TLTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLTableViewController.h; sourceTree = "<group>"; };
 		5EA94CDC17A6B60D0038BF1C /* TLTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLTableViewController.m; sourceTree = "<group>"; };
 		5EA94CE117A6B60D0038BF1C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5EA94CE717A6B60D0038BF1C /* UITableViewCell-Swipe-for-OptionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UITableViewCell-Swipe-for-OptionsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA94CE817A6B60D0038BF1C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		5EA94CF017A6B60D0038BF1C /* UITableViewCell-Swipe-for-OptionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UITableViewCell-Swipe-for-OptionsTests-Info.plist"; sourceTree = "<group>"; };
-		5EA94CF217A6B60D0038BF1C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5EA94CF417A6B60D0038BF1C /* UITableViewCell_Swipe_for_OptionsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableViewCell_Swipe_for_OptionsTests.m; sourceTree = "<group>"; };
 		5EA94CFE17A6C1140038BF1C /* TLSwipeForOptionsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLSwipeForOptionsCell.h; sourceTree = "<group>"; };
 		5EA94CFF17A6C1140038BF1C /* TLSwipeForOptionsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLSwipeForOptionsCell.m; sourceTree = "<group>"; };
 		5EA94D0117A6C3F10038BF1C /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
@@ -81,16 +62,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5EA94CE417A6B60D0038BF1C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5EA94CE917A6B60D0038BF1C /* XCTest.framework in Frameworks */,
-				5EA94CEB17A6B60D0038BF1C /* UIKit.framework in Frameworks */,
-				5EA94CEA17A6B60D0038BF1C /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -98,7 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				5EA94CCC17A6B60D0038BF1C /* UITableViewCell-Swipe-for-Options */,
-				5EA94CEE17A6B60D0038BF1C /* UITableViewCell-Swipe-for-OptionsTests */,
 				5EA94CC517A6B60D0038BF1C /* Frameworks */,
 				5EA94CC417A6B60D0038BF1C /* Products */,
 			);
@@ -108,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				5EA94CC317A6B60D0038BF1C /* UITableViewCell-Swipe-for-Options.app */,
-				5EA94CE717A6B60D0038BF1C /* UITableViewCell-Swipe-for-OptionsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,24 +125,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5EA94CEE17A6B60D0038BF1C /* UITableViewCell-Swipe-for-OptionsTests */ = {
-			isa = PBXGroup;
-			children = (
-				5EA94CF417A6B60D0038BF1C /* UITableViewCell_Swipe_for_OptionsTests.m */,
-				5EA94CEF17A6B60D0038BF1C /* Supporting Files */,
-			);
-			path = "UITableViewCell-Swipe-for-OptionsTests";
-			sourceTree = "<group>";
-		};
-		5EA94CEF17A6B60D0038BF1C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5EA94CF017A6B60D0038BF1C /* UITableViewCell-Swipe-for-OptionsTests-Info.plist */,
-				5EA94CF117A6B60D0038BF1C /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -194,24 +145,6 @@
 			productReference = 5EA94CC317A6B60D0038BF1C /* UITableViewCell-Swipe-for-Options.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5EA94CE617A6B60D0038BF1C /* UITableViewCell-Swipe-for-OptionsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5EA94CFB17A6B60D0038BF1C /* Build configuration list for PBXNativeTarget "UITableViewCell-Swipe-for-OptionsTests" */;
-			buildPhases = (
-				5EA94CE317A6B60D0038BF1C /* Sources */,
-				5EA94CE417A6B60D0038BF1C /* Frameworks */,
-				5EA94CE517A6B60D0038BF1C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5EA94CED17A6B60D0038BF1C /* PBXTargetDependency */,
-			);
-			name = "UITableViewCell-Swipe-for-OptionsTests";
-			productName = "UITableViewCell-Swipe-for-OptionsTests";
-			productReference = 5EA94CE717A6B60D0038BF1C /* UITableViewCell-Swipe-for-OptionsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -221,11 +154,6 @@
 				CLASSPREFIX = TL;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Teehan+Lax";
-				TargetAttributes = {
-					5EA94CE617A6B60D0038BF1C = {
-						TestTargetID = 5EA94CC217A6B60D0038BF1C;
-					};
-				};
 			};
 			buildConfigurationList = 5EA94CBE17A6B60D0038BF1C /* Build configuration list for PBXProject "UITableViewCell-Swipe-for-Options" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -241,7 +169,6 @@
 			projectRoot = "";
 			targets = (
 				5EA94CC217A6B60D0038BF1C /* UITableViewCell-Swipe-for-Options */,
-				5EA94CE617A6B60D0038BF1C /* UITableViewCell-Swipe-for-OptionsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -254,14 +181,6 @@
 				5EA94CE217A6B60D0038BF1C /* Images.xcassets in Resources */,
 				5EA94CD117A6B60D0038BF1C /* InfoPlist.strings in Resources */,
 				5E8B74EB17A808DD00B9187A /* MainStoryboard.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5EA94CE517A6B60D0038BF1C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5EA94CF317A6B60D0038BF1C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,37 +199,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5EA94CE317A6B60D0038BF1C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5EA94CF517A6B60D0038BF1C /* UITableViewCell_Swipe_for_OptionsTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5EA94CED17A6B60D0038BF1C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5EA94CC217A6B60D0038BF1C /* UITableViewCell-Swipe-for-Options */;
-			targetProxy = 5EA94CEC17A6B60D0038BF1C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5EA94CCF17A6B60D0038BF1C /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5EA94CD017A6B60D0038BF1C /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		5EA94CF117A6B60D0038BF1C /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5EA94CF217A6B60D0038BF1C /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -424,46 +319,6 @@
 			};
 			name = Release;
 		};
-		5EA94CFC17A6B60D0038BF1C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UITableViewCell-Swipe-for-Options.app/UITableViewCell-Swipe-for-Options";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(SYSTEM_APPS_DIR)/Xcode5-DP3.app/Contents/Developer/Library/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UITableViewCell-Swipe-for-Options/UITableViewCell-Swipe-for-Options-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "UITableViewCell-Swipe-for-OptionsTests/UITableViewCell-Swipe-for-OptionsTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		5EA94CFD17A6B60D0038BF1C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UITableViewCell-Swipe-for-Options.app/UITableViewCell-Swipe-for-Options";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(SYSTEM_APPS_DIR)/Xcode5-DP3.app/Contents/Developer/Library/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UITableViewCell-Swipe-for-Options/UITableViewCell-Swipe-for-Options-Prefix.pch";
-				INFOPLIST_FILE = "UITableViewCell-Swipe-for-OptionsTests/UITableViewCell-Swipe-for-OptionsTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -481,15 +336,6 @@
 			buildConfigurations = (
 				5EA94CF917A6B60D0038BF1C /* Debug */,
 				5EA94CFA17A6B60D0038BF1C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5EA94CFB17A6B60D0038BF1C /* Build configuration list for PBXNativeTarget "UITableViewCell-Swipe-for-OptionsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5EA94CFC17A6B60D0038BF1C /* Debug */,
-				5EA94CFD17A6B60D0038BF1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
