@@ -121,6 +121,9 @@ NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotifica
     
     self.scrollView.scrollEnabled = !self.editing;
     
+    // Corrects effect of showing the button labels while selected on editing mode (comment line, build, run, add new items to table, enter edit mode and select an entry)
+    self.scrollViewButtonView.hidden = editing;
+    
     NSLog(@"%d", editing);
 }
 

@@ -120,7 +120,11 @@ NSString *const TLSwipeForOptionsCellShouldHideMenuNotification = @"TLSwipeForOp
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
 	[super setEditing:editing animated:animated];
 	self.scrollView.scrollEnabled = !self.editing;
-//	NSLog(@"%d", editing);
+    
+    // Corrects effect of showing the button labels while selected on editing mode (comment line, build, run, add new items to table, enter edit mode and select an entry)
+    self.scrollViewButtonView.hidden = editing;
+
+    //	NSLog(@"%d", editing);
 }
 
 - (UILabel *)textLabel {
