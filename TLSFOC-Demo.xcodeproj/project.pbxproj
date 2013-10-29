@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EA9AF69181FF7D400BC09C9 /* TLSwipeForOptionsScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9AF68181FF7D400BC09C9 /* TLSwipeForOptionsScrollView.m */; };
 		DA3B2D7917C5843B00DB8C9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3B2D7817C5843B00DB8C9F /* Foundation.framework */; };
 		DA3B2D7B17C5843B00DB8C9F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3B2D7A17C5843B00DB8C9F /* CoreGraphics.framework */; };
 		DA3B2D7D17C5843B00DB8C9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3B2D7C17C5843B00DB8C9F /* UIKit.framework */; };
@@ -23,7 +24,6 @@
 		DA3B2DD617C5862200DB8C9F /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3B2DD517C5862200DB8C9F /* Reveal.framework */; };
 		DA3B2DD917C5863200DB8C9F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3B2DD717C5863200DB8C9F /* CFNetwork.framework */; };
 		DA3B2DDA17C5863200DB8C9F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3B2DD817C5863200DB8C9F /* QuartzCore.framework */; };
-		DA3B2DE017C5869900DB8C9F /* TLOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B2DDD17C5869900DB8C9F /* TLOverlayView.m */; };
 		DA3B2DE117C5869900DB8C9F /* TLSwipeForOptionsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B2DDF17C5869900DB8C9F /* TLSwipeForOptionsCell.m */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5EA9AF67181FF7D400BC09C9 /* TLSwipeForOptionsScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TLSwipeForOptionsScrollView.h; path = "UITableViewCell-Swipe-for-Options/TLSwipeForOptionsScrollView.h"; sourceTree = SOURCE_ROOT; };
+		5EA9AF68181FF7D400BC09C9 /* TLSwipeForOptionsScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TLSwipeForOptionsScrollView.m; path = "UITableViewCell-Swipe-for-Options/TLSwipeForOptionsScrollView.m"; sourceTree = SOURCE_ROOT; };
 		DA3B2D7517C5843B00DB8C9F /* TLSFOC-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TLSFOC-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3B2D7817C5843B00DB8C9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DA3B2D7A17C5843B00DB8C9F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,8 +62,6 @@
 		DA3B2DD517C5862200DB8C9F /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		DA3B2DD717C5863200DB8C9F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		DA3B2DD817C5863200DB8C9F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		DA3B2DDC17C5869900DB8C9F /* TLOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLOverlayView.h; sourceTree = "<group>"; };
-		DA3B2DDD17C5869900DB8C9F /* TLOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLOverlayView.m; sourceTree = "<group>"; };
 		DA3B2DDE17C5869900DB8C9F /* TLSwipeForOptionsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLSwipeForOptionsCell.h; sourceTree = "<group>"; };
 		DA3B2DDF17C5869900DB8C9F /* TLSwipeForOptionsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLSwipeForOptionsCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,8 +182,8 @@
 		DA3B2DDB17C5869900DB8C9F /* TLSwipeForOptionsCell */ = {
 			isa = PBXGroup;
 			children = (
-				DA3B2DDC17C5869900DB8C9F /* TLOverlayView.h */,
-				DA3B2DDD17C5869900DB8C9F /* TLOverlayView.m */,
+				5EA9AF67181FF7D400BC09C9 /* TLSwipeForOptionsScrollView.h */,
+				5EA9AF68181FF7D400BC09C9 /* TLSwipeForOptionsScrollView.m */,
 				DA3B2DDE17C5869900DB8C9F /* TLSwipeForOptionsCell.h */,
 				DA3B2DDF17C5869900DB8C9F /* TLSwipeForOptionsCell.m */,
 			);
@@ -289,8 +289,8 @@
 				DA3B2DC317C5849900DB8C9F /* TLContainerViewController.m in Sources */,
 				DA3B2DC417C5849900DB8C9F /* TLTableViewController.m in Sources */,
 				DA3B2DC517C5849900DB8C9F /* main.m in Sources */,
-				DA3B2DE017C5869900DB8C9F /* TLOverlayView.m in Sources */,
 				DA3B2DE117C5869900DB8C9F /* TLSwipeForOptionsCell.m in Sources */,
+				5EA9AF69181FF7D400BC09C9 /* TLSwipeForOptionsScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,16 +10,14 @@
 
 #import "TLSwipeForOptionsCell.h"
 #import "TLContainerViewController.h"
-#import "TLOverlayView.h"
 
-@interface TLTableViewController () <TLSwipeForOptionsCellDelegate, TLOverlayViewDelegate, UIActionSheetDelegate> {
+@interface TLTableViewController () <TLSwipeForOptionsCellDelegate, UIActionSheetDelegate> {
 	NSMutableArray *_objects;
 }
 
 // We need to keep track of the most recently selected cell for the action sheet.
 @property (nonatomic, weak) UITableViewCell *cellDisplayingMenuOptions;
 @property (nonatomic, weak) UITableViewCell *mostRecentlySelectedMoreCell;
-@property (nonatomic, strong) TLOverlayView *overlayView;
 
 @end
 
@@ -98,54 +96,19 @@
 	[self.delegate tableViewController:self didChangeEditing:editing];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSLog(@"Selected: %@", indexPath);
+}
+
 #pragma UIScrollViewDelegate Methods 
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
 	[[NSNotificationCenter defaultCenter] postNotificationName:TLSwipeForOptionsCellShouldHideMenuNotification object:scrollView];
 }
 
-#pragma mark - TLOverlayViewDelegate Methods
-
-- (UIView *)overlayView:(TLOverlayView *)view didHitTest:(CGPoint)point withEvent:(UIEvent *)event {
-	BOOL shouldInterceptTouches = YES;
-	
-	CGPoint location = [self.view convertPoint:point fromView:view];
-	CGRect rect = [self.view convertRect:self.cellDisplayingMenuOptions.frame toView:self.view];
-	
-	shouldInterceptTouches = CGRectContainsPoint(rect, location);
-	if (!shouldInterceptTouches)
-		[[NSNotificationCenter defaultCenter] postNotificationName:TLSwipeForOptionsCellShouldHideMenuNotification object:self.tableView];
-	
-	return shouldInterceptTouches?[self.cellDisplayingMenuOptions hitTest:point withEvent:event]:view;
-}
 
 #pragma mark - TLSwipeForOptionsCellDelegate Methods
-
-- (void)cell:(TLSwipeForOptionsCell *)cell didShowMenu:(BOOL)isShowingMenu {
-	self.cellDisplayingMenuOptions = cell;
-	[self.tableView setScrollEnabled:!isShowingMenu];
-	if (isShowingMenu) {
-		if (!self.overlayView) {
-			self.overlayView = [[TLOverlayView alloc] initWithFrame:self.view.bounds];
-			[self.overlayView setDelegate:self];
-		}
-		
-		[self.overlayView setFrame:self.view.bounds];
-		[self.view addSubview:self.overlayView];
-		
-		for (id subview in [self.tableView subviews]) {
-			if (![subview isEqual:cell] && [subview isKindOfClass:[TLSwipeForOptionsCell class]])
-				[subview setUserInteractionEnabled:NO];
-		}
-	} else {
-		[self.overlayView removeFromSuperview];
-		
-		for (id subview in [self.tableView subviews]) {
-			if (![subview isEqual:cell] && [subview isKindOfClass:[TLSwipeForOptionsCell class]])
-				[subview setUserInteractionEnabled:YES];
-		}
-	}
-}
 
 - (void)cellDidSelectDelete:(TLSwipeForOptionsCell *)cell {
 	NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];

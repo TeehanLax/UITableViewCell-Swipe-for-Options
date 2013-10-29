@@ -7,6 +7,7 @@
 //
 
 #import "TLSwipeForOptionsCell.h"
+#import "TLSwipeForOptionsScrollView.h"
 
 NSString *const TLSwipeForOptionsCellShouldHideMenuNotification = @"TLSwipeForOptionsCellShouldHideMenuNotification";
 
@@ -14,7 +15,7 @@ NSString *const TLSwipeForOptionsCellShouldHideMenuNotification = @"TLSwipeForOp
 
 @interface TLSwipeForOptionsCell () <UIScrollViewDelegate>
 
-@property (nonatomic, weak) UIScrollView *scrollView;
+@property (nonatomic, weak) TLSwipeForOptionsScrollView *scrollView;
 
 @property (nonatomic, weak) UIView *scrollViewContentView;	//The cell content (like the label) goes in this view.
 @property (nonatomic, weak) UIView *scrollViewButtonView;	//Contains our two buttons
@@ -45,7 +46,8 @@ NSString *const TLSwipeForOptionsCellShouldHideMenuNotification = @"TLSwipeForOp
 	
 	self.isShowingMenu = NO;
 	
-	UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds))];
+	TLSwipeForOptionsScrollView *scrollView = [[TLSwipeForOptionsScrollView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds))];
+    scrollView.tableViewCell = self;
 	scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.bounds) + kCatchWidth, CGRectGetHeight(self.bounds));
 	scrollView.delegate = self;
 	scrollView.showsHorizontalScrollIndicator = NO;
@@ -82,8 +84,9 @@ NSString *const TLSwipeForOptionsCellShouldHideMenuNotification = @"TLSwipeForOp
 	UILabel *scrollViewLabel = [[UILabel alloc] initWithFrame:CGRectInset(self.scrollViewContentView.bounds, 10.0f, 0.0f)];
 	self.scrollViewLabel = scrollViewLabel;
 	[self.scrollViewContentView addSubview:scrollViewLabel];
-	
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideMenuOptions) name:TLSwipeForOptionsCellShouldHideMenuNotification object:nil];
+    
+    self.selectedBackgroundView = [[UIView alloc] initWithFrame:self.bounds];
+    self.selectedBackgroundView.backgroundColor = [UIColor lightGrayColor];
 }
 
 - (void)hideMenuOptions {
@@ -123,8 +126,6 @@ NSString *const TLSwipeForOptionsCellShouldHideMenuNotification = @"TLSwipeForOp
     
     // Corrects effect of showing the button labels while selected on editing mode (comment line, build, run, add new items to table, enter edit mode and select an entry)
     self.scrollViewButtonView.hidden = editing;
-
-    //	NSLog(@"%d", editing);
 }
 
 - (UILabel *)textLabel {
@@ -153,18 +154,6 @@ NSString *const TLSwipeForOptionsCellShouldHideMenuNotification = @"TLSwipeForOp
 	}
 	
 	self.scrollViewButtonView.frame = CGRectMake(scrollView.contentOffset.x + (CGRectGetWidth(self.bounds) - kCatchWidth), 0.0f, kCatchWidth, CGRectGetHeight(self.bounds));
-	
-	if (scrollView.contentOffset.x >= kCatchWidth) {
-		if (!self.isShowingMenu) {
-			self.isShowingMenu = YES;
-			[self.delegate cell:self didShowMenu:self.isShowingMenu];
-		}
-	} else if (scrollView.contentOffset.x == 0.0f) {
-		if (self.isShowingMenu) {
-			self.isShowingMenu = NO;
-			[self.delegate cell:self didShowMenu:self.isShowingMenu];
-		}
-	}
 }
 
 @end

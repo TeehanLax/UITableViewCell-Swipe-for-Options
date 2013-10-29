@@ -21,6 +21,7 @@
 		5EA94D0217A6C3F10038BF1C /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA94D0117A6C3F10038BF1C /* Reveal.framework */; };
 		5EA94D0417A6C3F90038BF1C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA94D0317A6C3F90038BF1C /* QuartzCore.framework */; };
 		5EA94D0617A6C3FF0038BF1C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA94D0517A6C3FF0038BF1C /* CFNetwork.framework */; };
+		5EA9AF66181FF7C800BC09C9 /* TLSwipeForOptionsScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9AF65181FF7C800BC09C9 /* TLSwipeForOptionsScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		5EA94D0117A6C3F10038BF1C /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		5EA94D0317A6C3F90038BF1C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5EA94D0517A6C3FF0038BF1C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		5EA9AF64181FF7C800BC09C9 /* TLSwipeForOptionsScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLSwipeForOptionsScrollView.h; sourceTree = "<group>"; };
+		5EA9AF65181FF7C800BC09C9 /* TLSwipeForOptionsScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLSwipeForOptionsScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 				5E13E00317A7056000AD06FC /* TLContainerViewController.m */,
 				5EA94CFE17A6C1140038BF1C /* TLSwipeForOptionsCell.h */,
 				5EA94CFF17A6C1140038BF1C /* TLSwipeForOptionsCell.m */,
+				5EA9AF64181FF7C800BC09C9 /* TLSwipeForOptionsScrollView.h */,
+				5EA9AF65181FF7C800BC09C9 /* TLSwipeForOptionsScrollView.m */,
 				5EA94CE117A6B60D0038BF1C /* Images.xcassets */,
 				5EA94CCD17A6B60D0038BF1C /* Supporting Files */,
 			);
@@ -196,6 +201,7 @@
 				5EA94CD317A6B60D0038BF1C /* main.m in Sources */,
 				5E13E00417A7056000AD06FC /* TLContainerViewController.m in Sources */,
 				5EA94D0017A6C1140038BF1C /* TLSwipeForOptionsCell.m in Sources */,
+				5EA9AF66181FF7C800BC09C9 /* TLSwipeForOptionsScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
