@@ -133,6 +133,12 @@ NSString *const TLSwipeForOptionsCellShouldHideMenuNotification = @"TLSwipeForOp
 	return self.scrollViewLabel;
 }
 
+-(void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
+    [super setHighlighted:highlighted animated:animated];
+    
+    self.scrollViewButtonView.alpha = highlighted ? 0.0f : 1.0f;
+}
+
 #pragma mark - UIScrollViewDelegate Methods
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
