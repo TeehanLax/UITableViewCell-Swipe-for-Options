@@ -20,14 +20,6 @@
 @protocol TLSwipeForOptionsCellDelegate <NSObject>
 
 /**
- Tells the delegate that the specified cell’s menu is now shown or hidden.
- 
- @param cell The cell whose menu was shown or hidden.
- @param isShowingMenu `YES` if the menu was shown; otherwise, `NO`.
- */
-- (void)cell:(TLSwipeForOptionsCell *)cell didShowMenu:(BOOL)isShowingMenu;
-
-/**
  Tells the delegate that the specified cell’s “Delete” button is pressed.
  
  @param cell The cell whose “Delete” button was pressed.
