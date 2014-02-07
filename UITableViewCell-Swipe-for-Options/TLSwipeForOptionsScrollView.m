@@ -12,20 +12,20 @@
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [self.tableViewCell touchesBegan: touches withEvent: event];
+    [self.superview touchesBegan: touches withEvent: event];
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [self.tableViewCell touchesEnded:touches withEvent: event];
+    [self.superview touchesEnded:touches withEvent: event];
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self.tableViewCell touchesMoved:touches withEvent:event];
+    [self.superview touchesMoved:touches withEvent:event];
 }
 
 -(void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self.tableViewCell touchesCancelled:touches withEvent:event];
+    [self.superview touchesCancelled:touches withEvent:event];
 }
 
 @end
