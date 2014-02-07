@@ -10,6 +10,4 @@
 
 @interface TLSwipeForOptionsScrollView : UIScrollView
 
-@property (nonatomic, weak) UITableViewCell *tableViewCell;
-
 @end

@@ -47,7 +47,6 @@ NSString *const TLSwipeForOptionsCellShouldHideMenuNotification = @"TLSwipeForOp
 	self.isShowingMenu = NO;
 	
 	TLSwipeForOptionsScrollView *scrollView = [[TLSwipeForOptionsScrollView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds))];
-    scrollView.tableViewCell = self;
 	scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.bounds) + kCatchWidth, CGRectGetHeight(self.bounds));
 	scrollView.delegate = self;
 	scrollView.showsHorizontalScrollIndicator = NO;
