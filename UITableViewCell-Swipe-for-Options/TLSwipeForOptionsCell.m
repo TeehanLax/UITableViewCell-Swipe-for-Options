@@ -118,8 +118,8 @@ NSString *const TLSwipeForOptionsCellForegroundColorOptionKey = @"TLSwipeForOpti
 
 -(void)userPressedButton:(id)sender {
 	NSUInteger buttonIndex = [sender tag] - 2048;
-	NSDictionary* blockData = self.buttons[buttonIndex];
-    [self.delegate cell:self didSelectButtonAtIndex:buttonIndex withInfoDictionary:blockData];
+	NSDictionary* buttonInfoDictionary = self.buttons[buttonIndex];
+    [self.delegate cell:self didSelectButtonAtIndex:buttonIndex withInfoDictionary:buttonInfoDictionary];
     [self.scrollView setContentOffset:CGPointZero animated:YES];
 }
 
