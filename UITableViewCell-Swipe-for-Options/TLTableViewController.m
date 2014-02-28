@@ -80,6 +80,17 @@
     NSDate *object = _objects[indexPath.row];
     cell.textLabel.text = [object description];
     cell.delegate = self;
+	//	[cell resetButtons]; // prepareForReuse function already does this, hopefully.
+	[cell addButtonWithOptions:@{
+								 TLSwipeForOptionsCellTitleOptionKey: @"More",
+								 TLSwipeForOptionsCellBackgroundColorOptionKey:
+									 [UIColor colorWithRed:0.78f green:0.78f blue:0.8f alpha:1.0f]
+								}];
+	[cell addButtonWithOptions:@{
+								 TLSwipeForOptionsCellTitleOptionKey: @"Delete",
+								 TLSwipeForOptionsCellBackgroundColorOptionKey:
+									 [UIColor colorWithRed:1.0f green:0.231f blue:0.188f alpha:1.0f]
+								 }];
     
     return cell;
 }
@@ -108,17 +119,15 @@
 
 #pragma mark - TLSwipeForOptionsCellDelegate Methods 
 
--(void)cellDidSelectDelete:(TLSwipeForOptionsCell *)cell {
+- (void)cell:(TLSwipeForOptionsCell *)cell didSelectButtonAtIndex:(NSUInteger)index withInfoDictionary:(NSDictionary *)info {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-    
-    [_objects removeObjectAtIndex:indexPath.row];
-    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-}
-
--(void)cellDidSelectMore:(TLSwipeForOptionsCell *)cell {
-    self.mostRecentlySelectedMoreCell = cell;
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Flag", @"Mark as Unread", @"Move to Junk", @"Move Messages...", nil];
-    [self.delegate presentActionSheet:actionSheet fromViewController:self];
+    if (index == 0) {
+		UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Flag", @"Mark as Unread", @"Move to Junk", @"Move Messages...", nil];
+		[self.delegate presentActionSheet:actionSheet fromViewController:self];
+	} else {
+		[_objects removeObjectAtIndex:indexPath.row];
+		[self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+	}
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {

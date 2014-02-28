@@ -12,15 +12,22 @@
 
 @protocol TLSwipeForOptionsCellDelegate <NSObject>
 
--(void)cellDidSelectDelete:(TLSwipeForOptionsCell *)cell;
--(void)cellDidSelectMore:(TLSwipeForOptionsCell *)cell;
+- (void)cell:(TLSwipeForOptionsCell*)cell didSelectButtonAtIndex:(NSUInteger)index withInfoDictionary:(NSDictionary*)info;
 
 @end
 
 extern NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotification;
 
+extern NSString *const TLSwipeForOptionsCellTitleOptionKey;
+extern NSString *const TLSwipeForOptionsCellBackgroundColorOptionKey;
+extern NSString *const TLSwipeForOptionsCellForegroundColorOptionKey;
+
 @interface TLSwipeForOptionsCell : UITableViewCell
 
+- (void)addButtonWithOptions:(NSDictionary*)options;
+- (void)resetButtons;
+
+@property (nonatomic, strong) NSMutableArray* buttons;
 @property (nonatomic, weak) id<TLSwipeForOptionsCellDelegate> delegate;
 
 @end

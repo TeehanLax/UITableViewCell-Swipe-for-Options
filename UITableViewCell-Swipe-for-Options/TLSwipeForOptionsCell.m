@@ -10,7 +10,15 @@
 
 NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotification = @"TLSwipeForOptionsCellEnclosingTableViewDidScrollNotification";
 
-#define kCatchWidth 180
+NSString *const TLSwipeForOptionsCellTitleOptionKey = @"TLSwipeForOptionsCellTitleOptionKey";
+NSString *const TLSwipeForOptionsCellBackgroundColorOptionKey = @"TLSwipeForOptionsCellBackgroundColorOptionKey";
+NSString *const TLSwipeForOptionsCellForegroundColorOptionKey = @"TLSwipeForOptionsCellForegroundColorOptionKey";
+
+#define kButtonWidth 90.0
+#define kCatchWidth (self.buttons.count * kButtonWidth)
+#ifndef either
+#define either(x,y) (x?x:y)
+#endif
 
 @interface TLSwipeForOptionsCell () <UIScrollViewDelegate>
 
@@ -40,7 +48,30 @@ NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotifica
     return self;
 }
 
--(void)setup {
+- (void)setupButtons {
+	[self.scrollViewButtonView.subviews.copy makeObjectsPerformSelector:@selector(removeFromSuperview)];
+	
+//	for (NSDictionary* buttonDict in self.buttons) {
+	[self.buttons enumerateObjectsUsingBlock:^(NSDictionary* buttonDict, NSUInteger idx, BOOL *stop) {
+		// Set up our two buttons
+		UIButton *aButton = [UIButton buttonWithType:UIButtonTypeCustom];
+		aButton.frame = CGRectMake(kButtonWidth * idx, 0, kButtonWidth, CGRectGetHeight(self.bounds));
+		[aButton setTitle:buttonDict[TLSwipeForOptionsCellTitleOptionKey] forState:UIControlStateNormal];
+		[aButton setTitleColor:either(buttonDict[TLSwipeForOptionsCellForegroundColorOptionKey], UIColor.whiteColor)
+						 forState:UIControlStateNormal];
+		aButton.backgroundColor = either(buttonDict[TLSwipeForOptionsCellBackgroundColorOptionKey],
+											[UIColor colorWithRed:0.78f green:0.78f blue:0.8f alpha:1.0f]);
+		aButton.tag = 2048 + idx;
+		[aButton addTarget:self action:@selector(userPressedButton:) forControlEvents:UIControlEventTouchUpInside];
+		[self.scrollViewButtonView addSubview:aButton];
+	}];
+
+	self.scrollViewButtonView.frame = CGRectMake(0, 0, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds));
+	self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.bounds) + kCatchWidth, CGRectGetHeight(self.bounds));
+	[self setNeedsLayout];
+}
+
+- (void)setup {
     // Set up our contentView hierarchy
     
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds))];
@@ -54,24 +85,9 @@ NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotifica
     UIView *scrollViewButtonView = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetWidth(self.bounds) - kCatchWidth, 0, kCatchWidth, CGRectGetHeight(self.bounds))];
     self.scrollViewButtonView = scrollViewButtonView;
     [self.scrollView addSubview:scrollViewButtonView];
-    
-    // Set up our two buttons
-    UIButton *moreButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    moreButton.backgroundColor = [UIColor colorWithRed:0.78f green:0.78f blue:0.8f alpha:1.0f];
-    moreButton.frame = CGRectMake(0, 0, kCatchWidth / 2.0f, CGRectGetHeight(self.bounds));
-    [moreButton setTitle:@"More" forState:UIControlStateNormal];
-    [moreButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [moreButton addTarget:self action:@selector(userPressedMoreButton:) forControlEvents:UIControlEventTouchUpInside];
-    [self.scrollViewButtonView addSubview:moreButton];
-    
-    UIButton *deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    deleteButton.backgroundColor = [UIColor colorWithRed:1.0f green:0.231f blue:0.188f alpha:1.0f];
-    deleteButton.frame = CGRectMake(kCatchWidth / 2.0f, 0, kCatchWidth / 2.0f, CGRectGetHeight(self.bounds));
-    [deleteButton setTitle:@"Delete" forState:UIControlStateNormal];
-    [deleteButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [deleteButton addTarget:self action:@selector(userPressedDeleteButton:) forControlEvents:UIControlEventTouchUpInside];
-    [self.scrollViewButtonView addSubview:deleteButton];
-    
+
+	[self setupButtons];
+	
     UIView *scrollViewContentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds))];
     scrollViewContentView.backgroundColor = [UIColor whiteColor];
     [self.scrollView addSubview:scrollViewContentView];
@@ -88,15 +104,23 @@ NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotifica
     [self.scrollView setContentOffset:CGPointZero animated:YES];
 }
 
-#pragma mark - Private Methods 
-
--(void)userPressedDeleteButton:(id)sender {
-    [self.delegate cellDidSelectDelete:self];
-    [self.scrollView setContentOffset:CGPointZero animated:YES];
+- (void)addButtonWithOptions:(NSDictionary *)options {
+	if (!self.buttons)
+		self.buttons = NSMutableArray.new;
+	[self.buttons addObject:options];
+	[self setupButtons];
+}
+- (void)resetButtons {
+	self.buttons = nil;
 }
 
--(void)userPressedMoreButton:(id)sender {
-    [self.delegate cellDidSelectMore:self];
+#pragma mark - Private Methods 
+
+-(void)userPressedButton:(id)sender {
+	NSUInteger buttonIndex = [sender tag] - 2048;
+	NSDictionary* buttonInfoDictionary = self.buttons[buttonIndex];
+    [self.delegate cell:self didSelectButtonAtIndex:buttonIndex withInfoDictionary:buttonInfoDictionary];
+    [self.scrollView setContentOffset:CGPointZero animated:YES];
 }
 
 #pragma mark - Overridden Methods
@@ -112,7 +136,7 @@ NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotifica
 
 -(void)prepareForReuse {
     [super prepareForReuse];
-    
+    [self resetButtons];
     [self.scrollView setContentOffset:CGPointZero animated:NO];
 }
 
@@ -160,3 +184,4 @@ NSString *const TLSwipeForOptionsCellEnclosingTableViewDidBeginScrollingNotifica
 @end
 
 #undef kCatchWidth
+#undef kButtonWidth
