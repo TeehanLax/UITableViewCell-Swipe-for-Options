@@ -5,7 +5,7 @@
 
 /*!
  \brief         The Reveal Log level bit flags.
- \discussion    These flags are addative.  Ie, you should bitwise OR them together.  
+ \discussion    These flags are additive.  Ie, you should bitwise OR them together.  
 
  \seealso       IBARevealLoggerSetLevelMask
  \seealso       IBARevealLoggerGetLevelMask
